@@ -1,6 +1,4 @@
 ﻿using System;  
-namespace Tic-Tac-Toe
-{
 class UI {
    static void Main(string [] args) {
      Console.WriteLine("Tic-Tac-Toe game");
@@ -11,15 +9,15 @@ class UI {
 class Program {
    public static string [] cells = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
-      static void showGrid() {
+      public static void showGrid() {
           for (int i = 0; i < 3; i++) {
              for (int j = 0; j < 3; j++) {
-                Console.WriteLine();
-                Console.WriteLine("~~~~~~");
+               Console.Write(cells[i]);   
+               Console.Write("|");
             }
-            Console.WriteLine(cells[i] + '|');
+            Console.WriteLine();
+            Console.WriteLine("~~~~~~");
          }
           //end of loop and showGrid function//
       }
-}
 }
