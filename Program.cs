@@ -5,6 +5,7 @@ class UI {
      while (Program.isPlaying)
      {
         Program.showGrid(); 
+        break;
      }
      Console.ReadKey();
    }
