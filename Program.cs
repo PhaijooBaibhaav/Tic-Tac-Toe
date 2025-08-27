@@ -2,11 +2,18 @@
 class UI {
    static void Main(string [] args) {
      Console.WriteLine("Tic-Tac-Toe game");
-     Program.showGrid(); 
+     while (Program.isPlaying)
+     {
+        Program.showGrid(); 
+     }
+     Console.ReadKey();
    }
 }
 
 class Program {
+
+   public static bool isPlaying = true;
+
    public static string [,] cells =  { // string[][] can also be used
                                        {"1", "2", "3"},
                                        {"4", "5", "6"},
@@ -25,4 +32,5 @@ class Program {
       }
 }
 
-
+// cells.GetLength(0); for first dimension of 1D
+// and (1) for 2d
