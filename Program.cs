@@ -9,12 +9,18 @@ class UI {
 
         if (isPlayer1Playing)
         {
-           Console.WriteLine($"{}'s turn."); 
+            Console.WriteLine("Choose what you want to play as: \n1. X \n2. O");
+            string choose = Console.ReadLine();
+
+            getGamemodePly1(choosePly1);
+
+           Console.WriteLine($"{choosePly1}'s turn."); 
         }
 
         else
         {
-            Console.WriteLine($"{}'s turn.");
+           getGamemodPly2(choosePly2);
+           Console.WriteLine($"{choosePly2}'s turn.");
         }
      }
      Console.ReadKey();
@@ -26,9 +32,6 @@ class Program {
    public static bool isPlaying = true;
    bool isPlayer1Playing = true;
    
-   enum turns {
-      X,O   
-   }
    public static string [,] cells =  { // string[][] can also be used
                                        {"1", "2", "3"},
                                        {"4", "5", "6"},
@@ -46,6 +49,29 @@ class Program {
          }
       }
 
+    public static string getGamemodePly1(choose) {
+       if (choosePly1 == 1)
+       {
+         return "X";           
+       }
+
+       else
+       {
+           return "Y";
+       }
+    }
+
+    public static string getGamemodPly2() {
+      if(choosePly1 == "X") 
+      {
+         return "Y";
+      }
+      
+      else
+      {
+          return "X";
+      }
+    }
     
 }
 
