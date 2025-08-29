@@ -7,18 +7,20 @@ class UI {
         Program.showGrid(); 
         break;
 
-        if (isPlayer1Playing)
+        if (Program.isPlayer1Playing)
         {
             Console.WriteLine("Choose what you want to play as: \n1. X \n2. O");
             string choose = Console.ReadLine();
 
-            getGamemodePly1(choosePly1);
+            string choosePly1;   
+            getGamemodePly1(string choosePly1);
 
            Console.WriteLine($"{choosePly1}'s turn."); 
         }
 
         else
         {
+            string choosePly2;
            getGamemodPly2(choosePly2);
            Console.WriteLine($"{choosePly2}'s turn.");
         }
@@ -30,7 +32,7 @@ class UI {
 class Program {
 
    public static bool isPlaying = true;
-   bool isPlayer1Playing = true;
+   public static bool isPlayer1Playing = true;
    
    public static string [,] cells =  { // string[][] can also be used
                                        {"1", "2", "3"},
