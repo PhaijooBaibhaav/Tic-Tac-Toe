@@ -1,4 +1,5 @@
-﻿using System;  
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
 class UI {
    static void Main(string [] args) {
      Console.WriteLine("Tic-Tac-Toe game");
@@ -10,19 +11,18 @@ class UI {
         if (Program.isPlayer1Playing)
         {
             Console.WriteLine("Choose what you want to play as: \n1. X \n2. O");
-            string choose = Console.ReadLine();
+            string choosePly1 = Console.ReadLine();
 
-            string choosePly1;   
-            getGamemodePly1(string choosePly1);
+
+            Program.getGamemodePly1(choosePly1);
 
            Console.WriteLine($"{choosePly1}'s turn."); 
         }
 
         else
         {
-            string choosePly2;
-           getGamemodPly2(choosePly2);
-           Console.WriteLine($"{choosePly2}'s turn.");
+           Program.getGamemodPly2(choosePly1);
+           Console.WriteLine($"{choosePly1}'s turn.");
         }
      }
      Console.ReadKey();
@@ -51,7 +51,7 @@ class Program {
          }
       }
 
-    public static string getGamemodePly1(choose) {
+    public static string getGamemodePly1(string choose) {
        if (choosePly1 == 1)
        {
          return "X";           
@@ -63,7 +63,7 @@ class Program {
        }
     }
 
-    public static string getGamemodPly2() {
+    public static string getGamemodPly2(string choose) {
       if(choosePly1 == "X") 
       {
          return "Y";
