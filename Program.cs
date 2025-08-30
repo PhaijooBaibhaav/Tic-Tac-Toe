@@ -15,8 +15,10 @@ class UI {
          }
          
          Console.WriteLine("Choose what do you want to play as: \n\t1. X \n\t2. Y");
-         int choose = int.Parse(Console.ReadLine());
+         int chooseIndex = int.Parse(Console.ReadLine());
 
+         string choose = Program.turns[chooseIndex];
+         isPlayer1turn =!isPlayer1turn;
 
         
     }
@@ -26,6 +28,7 @@ class UI {
 
 class Program {
 
+   public static string[] turns = {"X" , "O"};
    public static bool isPlaying = true;
    public static bool isPlayer1turn = true;
    
