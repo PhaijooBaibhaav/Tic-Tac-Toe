@@ -6,7 +6,7 @@
 
 # Description
 
-#### A simple terminal based tictactoe game being written in `C#`. Currently working for it to  support two player mode with keyboard input.
+#### A simple terminal based tictactoe game being written in C#. Currently working for it to  support two player mode with keyboard input.
 
 # Planning
 #### ~ Completing the game.
