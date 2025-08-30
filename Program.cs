@@ -7,6 +7,13 @@ class UI {
      {
         Program.showGrid(); 
         break;
+
+         if(isPlayer1turn) {
+            Console.WriteLine("Player1's turn!");
+         } else {
+            Console.WriteLine("Player2's turn!");
+         }
+        
     }
      Console.ReadKey();
    }
@@ -15,7 +22,7 @@ class UI {
 class Program {
 
    public static bool isPlaying = true;
-   public static bool isPlayer1Playing = true;
+   public static bool isPlayer1turn = true;
    
    public static string [,] cells =  { // string[][] can also be used
                                        {"1", "2", "3"},
