@@ -13,6 +13,11 @@ class UI {
          } else {
             Console.WriteLine("Player2's turn!");
          }
+         
+         Console.WriteLine("Choose what do you want to play as: \n\t1. X \n\t2. Y");
+         int choose = int.Parse(Console.ReadLine());
+
+
         
     }
      Console.ReadKey();
