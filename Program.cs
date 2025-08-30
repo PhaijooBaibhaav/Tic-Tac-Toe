@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
+
 class UI {
    static void Main(string [] args) {
      Console.WriteLine("Tic-Tac-Toe game");
@@ -7,24 +7,7 @@ class UI {
      {
         Program.showGrid(); 
         break;
-
-        if (Program.isPlayer1Playing)
-        {
-            Console.WriteLine("Choose what you want to play as: \n1. X \n2. O");
-            string choosePly1 = Console.ReadLine();
-
-
-            Program.getGamemodePly1(choosePly1);
-
-           Console.WriteLine($"{choosePly1}'s turn."); 
-        }
-
-        else
-        {
-           Program.getGamemodPly2(choosePly1);
-           Console.WriteLine($"{choosePly1}'s turn.");
-        }
-     }
+    }
      Console.ReadKey();
    }
 }
@@ -49,32 +32,7 @@ class Program {
          Console.WriteLine();
          Console.WriteLine(" " + "~-~-~-~-");
          }
-      }
-
-    public static string getGamemodePly1(string choose) {
-       if (choosePly1 == 1)
-       {
-         return "X";           
-       }
-
-       else
-       {
-           return "Y";
-       }
     }
-
-    public static string getGamemodPly2(string choose) {
-      if(choosePly1 == "X") 
-      {
-         return "Y";
-      }
-      
-      else
-      {
-          return "X";
-      }
-    }
-    
 }
 
 // cells.GetLength(0); for first dimension of 1D
