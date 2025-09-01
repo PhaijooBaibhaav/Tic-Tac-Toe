@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ganga Ram Phaijoo\\onedrive\\documents\\container\\csharp\\tictactoe\\tictactoe.csproj",
+      "projectUniqueName": "C:\\Users\\Ganga Ram Phaijoo\\OneDrive\\Documents\\BP\\csharp\\tictactoe\\tictactoe.csproj",
       "projectName": "tictactoe",
-      "projectPath": "C:\\Users\\Ganga Ram Phaijoo\\onedrive\\documents\\container\\csharp\\tictactoe\\tictactoe.csproj",
+      "projectPath": "C:\\Users\\Ganga Ram Phaijoo\\OneDrive\\Documents\\BP\\csharp\\tictactoe\\tictactoe.csproj",
       "packagesPath": "C:\\Users\\Ganga Ram Phaijoo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ganga Ram Phaijoo\\onedrive\\documents\\container\\csharp\\tictactoe\\obj\\",
+      "outputPath": "C:\\Users\\Ganga Ram Phaijoo\\OneDrive\\Documents\\BP\\csharp\\tictactoe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ganga Ram Phaijoo\\AppData\\Roaming\\NuGet\\NuGet.Config"

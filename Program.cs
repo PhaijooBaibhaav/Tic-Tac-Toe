@@ -5,10 +5,10 @@ class UI {
      Console.WriteLine("Tic-Tac-Toe game");
      while (Program.isPlaying)
      {
-        Program.showGrid(); 
+        Program.ShowGrid(); 
         break;
 
-         if(isPlayer1turn) {
+         if(Program.isPlayer1turn) {
             Console.WriteLine("Player1's turn!");
          } else {
             Console.WriteLine("Player2's turn!");
@@ -18,7 +18,7 @@ class UI {
          int chooseIndex = int.Parse(Console.ReadLine());
 
          string choose = Program.turns[chooseIndex];
-         isPlayer1turn =!isPlayer1turn;
+         Program.isPlayer1turn =!Program.isPlayer1turn;
 
         
     }
@@ -38,7 +38,7 @@ class Program {
                                        {"7", "8", "9"},
                                     };
 
-    public static void showGrid() {
+    public static void ShowGrid() {
       for (int i = 0; i < cells.GetLength(0); i++) {
          for (int j = 0; j < cells.GetLength(1); j++) {
                Console.Write(' '+cells[i,j]);
@@ -47,8 +47,24 @@ class Program {
          Console.WriteLine();
          Console.WriteLine(" " + "~-~-~-~-");
          }
+
+      public static void CheckIfWon() {
+
+         if (cells[0,0] = cells[0,1] && cells[0,1] == cells[0,2] ||
+               ) {
+            //do something
+         }
+      }
     }
 }
 
 // cells.GetLength(0); for first dimension of 1D
 // and (1) for 2d
+
+// ~ C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\Program.cs(49,11): error CS1513: } expected [C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tic
+// ~ tactoe\tictactoe.csproj]
+// ~ C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\Program.cs(51,36): error CS1002: ; expected [C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tic
+// ~ tactoe\tictactoe.csproj]
+// ~ C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\Program.cs(53,1): error CS1022: Type or namespace definition, or end-of-file expected [C:\Users\Ganga Ra
+// ~ m Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\tictactoe.csproj]
+
