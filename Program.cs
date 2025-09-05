@@ -21,6 +21,8 @@ namespace Tic-Tac-Toe {
 				Program.isPlayer1turn =!Program.isPlayer1turn;
 
 				Program.count++;
+				Console.WriteLine("Write your turn: ");			
+				int turn = Convert.ToInt32(Console.ReadLine());
 
 				break;
 			}
@@ -52,6 +54,20 @@ namespace Tic-Tac-Toe {
 			}
 		}
 
+		public static void GetInput(int turn, string player) {
+			
+			for (int i = 0; i < 3; i++)	{
+				for (int j = 0; j < 3; j++) {
+
+					
+
+					if (cells[i,j] == turn) {
+						cells[i,j] = player;
+					}
+				} 
+			}
+		}
+
 		public static bool CheckIfWon(string player) {
 
 			for(int i = 0; i < 3; i++) {
@@ -72,34 +88,13 @@ namespace Tic-Tac-Toe {
 
 			if (cells[2,0] == player && cells[1,1] == player && cells[0,2] == player )
 				return true;
+
+			else if (count == 9) {
+				return false;
+			}
 		}
 	}
 }
 
 // cells.GetLength(0); for first dimension of 1D
 // and (1) for 2d
-
-//C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\Program.cs(57,27): error CS0443: Syntax error; value expected [C:\Users\Ganga Ram Phaijoo\OneDriv
-//e\Documents\BP\csharp\tictactoe\tictactoe.csproj]
-//C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\Program.cs(63,1): error CS1022: Type or namespace definition, or end-of-file expected [C:\Users\G
-//anga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\tictactoe.csproj]
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-//if ((cells[0,0] == cells[0,1] && cells[0,1] == cells[0,2]) || 
-//		(cells[1,0] == cells[1,1] && cells[1,1] == cells[1,2]) || 
-//		(cells[2,0] == cells[2,1] && cells[2,1] == cells[2,2]) || 
-//		(cells[0,0] == cells[1,0] && cells[1,0] == cells[2,0]) || 
-//		(cells[0,1] == cells[1,1] && cells[1,1] == cells[2,1]) || 
-//		(cells[0,2] == cells[1,2] && cells[1,2] == cells[2,2]) || 
-//		(cells[0,0] == cells[1,1] && cells[1,1] == cells[2,2]) || 
-//		(cells[0,2] == cells[1,1] && cells[1,1] == cells[2,0])) {
-
-//	Console.WriteLine($"{} won.");
-
-//}
-
-//else if (count == 9) {
-//	Console.WriteLine("It is a draw!"); 
-//
-
