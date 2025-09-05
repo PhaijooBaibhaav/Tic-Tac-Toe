@@ -55,13 +55,23 @@ namespace Tic-Tac-Toe {
 		public static bool CheckIfWon(string player) {
 
 			for(int i = 0; i < 3; i++) {
-
-				if (cells[i, 0] == player && cells[i, 1] == player && cells[i, 2] == player) {
+				if (cells[i,0] == player && cells[i,1] == player && cells[i,2] == player) {
 					return true;
 				}
-
 			}
 
+			for(int i = 0; i < 3; i++) {
+				if (cells[0,i] == player && cells[1,i] == player && cells[2,i] == player) {
+					return true;
+				}
+			}
+
+			if (cells[0,0] == player && cells[1,1] == player && cells[2,2] == player) {
+				return true;
+			}
+
+			if (cells[2,0] == player && cells[1,1] == player && cells[0,2] == player )
+				return true;
 		}
 	}
 }
@@ -92,3 +102,4 @@ namespace Tic-Tac-Toe {
 //else if (count == 9) {
 //	Console.WriteLine("It is a draw!"); 
 //
+
