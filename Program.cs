@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Tic-Tac-Toe {
+namespace TicTacToe {
 	class UI {
 		static void Main(string [] args) {
 			Console.WriteLine("Tic-Tac-Toe game");
@@ -15,18 +15,20 @@ namespace Tic-Tac-Toe {
 
 
 				Console.WriteLine("Choose what do you want to play as: \n\t1. X \n\t2. O");
-				int chooseIndex = int.Parse(Console.ReadLine());
+				int playerIndex = int.Parse(Console.ReadLine());
 
-				string choose = Program.turns[chooseIndex];
+				string  player = Program.turns[playerIndex];
 				Program.isPlayer1turn =!Program.isPlayer1turn;
 
 				Program.count++;
+
 				Console.WriteLine("Write your turn: ");			
 				int turn = Convert.ToInt32(Console.ReadLine());
 
+				Program.GetInput();
 				break;
 			}
-			Console.ReadKey();
+			Console.ReadKey(turn, player);
 		}
 	}
 
@@ -55,14 +57,14 @@ namespace Tic-Tac-Toe {
 		}
 
 		public static void GetInput(int turn, string player) {
-			
+
 			for (int i = 0; i < 3; i++)	{
 				for (int j = 0; j < 3; j++) {
 
-					
+
 
 					if (cells[i,j] == turn) {
-						cells[i,j] = player;
+						player = cells[i,j];
 					}
 				} 
 			}
@@ -98,3 +100,7 @@ namespace Tic-Tac-Toe {
 
 // cells.GetLength(0); for first dimension of 1D
 // and (1) for 2d
+
+
+
+
