@@ -75,6 +75,7 @@ namespace TicTacToe {
 
 					if (cells[i,j] == turn.ToString()) {
 						cells[i,j] = player;
+						Console.Clear();
 					}
 				} 
 			}
