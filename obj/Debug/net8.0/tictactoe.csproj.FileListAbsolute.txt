@@ -19,3 +19,10 @@ C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\obj\Debug\net8
 C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\obj\Debug\net8.0\tictactoe.dll
 C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\obj\Debug\net8.0\refint\tictactoe.dll
 C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\obj\Debug\net8.0\tictactoe.pdb
+C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\bin\Debug\net8.0\tictactoe.exe
+C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\bin\Debug\net8.0\tictactoe.deps.json
+C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\bin\Debug\net8.0\tictactoe.runtimeconfig.json
+C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\bin\Debug\net8.0\tictactoe.dll
+C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\bin\Debug\net8.0\tictactoe.pdb
+C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\obj\Debug\net8.0\tictactoe.genruntimeconfig.cache
+C:\Users\Ganga Ram Phaijoo\OneDrive\Documents\BP\csharp\tictactoe\obj\Debug\net8.0\ref\tictactoe.dll

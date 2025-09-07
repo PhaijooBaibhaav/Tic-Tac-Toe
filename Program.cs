@@ -7,17 +7,15 @@ namespace TicTacToe {
 			{
 				Program.ShowGrid(); 
 
-				if(Program.isPlayer1turn) {
+				if (Program.isPlayer1turn) {
 					Console.WriteLine("Player1's turn!");
+					Program.player = Program.player1Symbol;
 				} else {
 					Console.WriteLine("Player2's turn!");
+					Program.player = Program.player2Symbol;
 				}
 
-
-				Console.WriteLine("Choose what do you want to play as: \n\t1. X \n\t2. O");
-				int playerIndex = int.Parse(Console.ReadLine());
-
-				string  player = Program.turns[playerIndex];
+				
 				Program.isPlayer1turn =!Program.isPlayer1turn;
 
 				Program.count++;
@@ -25,19 +23,31 @@ namespace TicTacToe {
 				Console.WriteLine("Write your turn: ");			
 				int turn = Convert.ToInt32(Console.ReadLine());
 
-				Program.GetInput();
-				break;
+				Program.GetInput(turn, Program.player);
+
+				if (Program.CheckIfWon(Program.player)) {
+					Console.WriteLine($"{Program.player} won!");
+					Program.isPlaying = false;
+
+				} else if (Program.count == 9) {
+					Console.WriteLine("It is a draw!");
+					Program.isPlaying = false;
+				}
+
+
 			}
-			Console.ReadKey(turn, player);
+			Console.ReadKey();
 		}
 	}
 
 	class Program {
 
-		public static string[] turns = {"X" , "O"};
+		public static string player1Symbol = "X";
+		public static string player2Symbol = "O";
 		public static bool isPlaying = true;
 		public static bool isPlayer1turn = true;
 		public static int count = 0;
+		public static string player;
 
 		public static string [,] cells =  { // string[][] can also be used
 			{"1", "2", "3"},
@@ -56,15 +66,15 @@ namespace TicTacToe {
 			}
 		}
 
-		public static void GetInput(int turn, string player) {
+		public static void GetInput(int turn, string player ) {
 
 			for (int i = 0; i < 3; i++)	{
 				for (int j = 0; j < 3; j++) {
 
 
 
-					if (cells[i,j] == turn) {
-						player = cells[i,j];
+					if (cells[i,j] == turn.ToString()) {
+						cells[i,j] = player;
 					}
 				} 
 			}
@@ -91,9 +101,7 @@ namespace TicTacToe {
 			if (cells[2,0] == player && cells[1,1] == player && cells[0,2] == player )
 				return true;
 
-			else if (count == 9) {
-				return false;
-			}
+			return false;
 		}
 	}
 }
