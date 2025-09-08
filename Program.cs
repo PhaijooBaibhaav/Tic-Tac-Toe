@@ -66,7 +66,7 @@ namespace TicTacToe {
 			}
 		}
 
-		public static void GetInput(int turn, string player ) {
+		public static bool GetInput(int turn, string player ) {
 
 			for (int i = 0; i < 3; i++)	{
 				for (int j = 0; j < 3; j++) {
@@ -74,7 +74,15 @@ namespace TicTacToe {
 
 
 					if (cells[i,j] == turn.ToString()) {
+
+
+						if (cells[i,j] == "X" || cells[i,j] == "O") {
+							Console.WriteLine("This cell has already been taken!");
+							return false; /* exits the function here */
+						}
+
 						cells[i,j] = player;
+						return false;
 						Console.Clear();
 					}
 				} 
