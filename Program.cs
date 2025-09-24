@@ -57,10 +57,10 @@ namespace TicTacToe
         public static bool isPlaying = true;
         public static bool isPlayer1turn = true;
         public static int count = 0;
-        public static string player;
+        public static string player = "-1";
 
         public static string[,] cells =  { // string[][] can also be used
-			{"1", "2", "3"},
+            {"1", "2", "3"},
             {"4", "5", "6"},
             {"7", "8", "9"},
         };
@@ -79,7 +79,7 @@ namespace TicTacToe
             }
         }
 
-        public static bool GetInput(int turn, string player)
+        public static void GetInput(int turn, string player)
         {
 
             for (int i = 0; i < 3; i++)
@@ -96,11 +96,11 @@ namespace TicTacToe
                         if (cells[i, j] == "X" || cells[i, j] == "O")
                         {
                             Console.WriteLine("This cell has already been taken!");
-                            return false; /* exits the function here */
+                            return ; /* exits the function here */
                         }
 
                         cells[i, j] = player;
-                        return false;
+                        return ;
                         Console.Clear();
                     }
                 }
@@ -137,14 +137,13 @@ namespace TicTacToe
             return false;
         }
 
-		public static bool CheckMistakeAndError() 
-		{
+        public static bool CheckError() 
+        {
 
-		}
+        }
     }
 }
 
 // cells.GetLength(0); for first dimension of 1D
 // and (1) for 2d
-
 
