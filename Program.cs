@@ -137,9 +137,28 @@ namespace TicTacToe
             return false;
         }
 
-        public static bool CheckError() 
+        public static bool CheckError(int turn) 
         {
+            if (turn < 1 || turn > 9) {
+                Console.WriteLine("Invalid input!");
+                return true;
+            }
 
+            string turnInStr = turn.ToString();
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (cells[i, j] == turnInStr)
+                    {
+                        // Cell is valid and not taken
+                        return false;
+                    }
+                }
+            }
+
+            Console.WriteLine("This cell has already been taken!");
         }
     }
 }
