@@ -27,7 +27,16 @@ namespace TicTacToe
                 Program.count++;
 
                 Console.WriteLine("Write your turn: ");
-                int turn = Convert.ToInt32(Console.ReadLine());
+
+                string input  = Console.ReadLine();
+                int turn;  
+                
+                if (int.TryParse(input, out turn)) {
+                    Console.WriteLine("Please enter a number in the range of 1 to 9!");
+                    Program.isPlayer1turn = !Program.isPlayer1turn;
+                    Program.count --;
+                    continue;
+                }
 
                 if (Program.CheckError(turn)) {
                     Program.isPlayer1turn = !Program.isPlayer1turn;
