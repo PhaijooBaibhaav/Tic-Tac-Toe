@@ -162,6 +162,7 @@ namespace TicTacToe
             }
 
             Console.WriteLine("This cell has already been taken!");
+            return true;
         }
 
     }
