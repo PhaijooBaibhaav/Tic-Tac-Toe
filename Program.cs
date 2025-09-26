@@ -29,6 +29,12 @@ namespace TicTacToe
                 Console.WriteLine("Write your turn: ");
                 int turn = Convert.ToInt32(Console.ReadLine());
 
+                if (Program.CheckError(turn)) {
+                    Program.isPlayer1turn = !Program.isPlayer1turn;
+                    Program.count--;
+                    continue;
+                }
+
                 Program.GetInput(turn, Program.player);
 
                 if (Program.CheckIfWon(Program.player))
@@ -146,12 +152,9 @@ namespace TicTacToe
 
             string turnInStr = turn.ToString();
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    if (cells[i, j] == turnInStr)
-                    {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (cells[i, j] == turnInStr) {
                         // Cell is valid and not taken
                         return false;
                     }
@@ -160,9 +163,8 @@ namespace TicTacToe
 
             Console.WriteLine("This cell has already been taken!");
         }
+
     }
 }
-
 // cells.GetLength(0); for first dimension of 1D
 // and (1) for 2d
-
