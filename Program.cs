@@ -31,7 +31,7 @@ namespace TicTacToe
                 string input  = Console.ReadLine();
                 int turn;  
                 
-                if (int.TryParse(input, out turn)) {
+                if (!(int.TryParse(input, out turn))) {
                     Console.WriteLine("Please enter a number in the range of 1 to 9!");
                     Program.isPlayer1turn = !Program.isPlayer1turn;
                     Program.count --;
@@ -115,8 +115,8 @@ namespace TicTacToe
                         }
 
                         cells[i, j] = player;
-                        return ;
                         Console.Clear();
+                        return ;
                     }
                 }
             }
