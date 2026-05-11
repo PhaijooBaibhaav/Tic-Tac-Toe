@@ -1,22 +1,16 @@
 ﻿using System;
-namespace TicTacToe
-{
-    class UI
-    {
-        static void Main(string[] args)
-        {
+namespace TicTacToe {
+    class UI {
+        static void Main(string[] args) {
             Console.WriteLine("Tic-Tac-Toe game");
-            while (Program.isPlaying)
-            {
+            while (Program.isPlaying) {
                 Program.ShowGrid();
 
-                if (Program.isPlayer1turn)
-                {
+                if (Program.isPlayer1turn) {
                     Console.WriteLine("Player1's turn!");
                     Program.player = Program.player1Symbol;
                 }
-                else
-                {
+                else {
                     Console.WriteLine("Player2's turn!");
                     Program.player = Program.player2Symbol;
                 }
@@ -46,14 +40,12 @@ namespace TicTacToe
 
                 Program.GetInput(turn, Program.player);
 
-                if (Program.CheckIfWon(Program.player))
-                {
+                if (Program.CheckIfWon(Program.player)) {
                     Console.WriteLine($"{Program.player} won!");
                     Program.isPlaying = false;
 
                 }
-                else if (Program.count == 9)
-                {
+                else if (Program.count == 9) {
                     Console.WriteLine("It is a draw!");
                     Program.isPlaying = false;
                 }
@@ -64,8 +56,7 @@ namespace TicTacToe
         }
     }
 
-    class Program
-    {
+    class Program {
 
         public static string player1Symbol = "X";
         public static string player2Symbol = "O";
@@ -178,3 +169,4 @@ namespace TicTacToe
 }
 // cells.GetLength(0); for first dimension of 1D
 // and (1) for 2d
+
