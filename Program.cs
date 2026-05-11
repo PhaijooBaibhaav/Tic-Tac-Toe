@@ -113,27 +113,21 @@ namespace TicTacToe {
             }
         }
 
-        public static bool CheckIfWon(string player)
-        {
+        public static bool CheckIfWon(string player) {
 
-            for (int i = 0; i < 3; i++)
-            {
-                if (cells[i, 0] == player && cells[i, 1] == player && cells[i, 2] == player)
-                {
+            for (int i = 0; i < 3; i++) {
+                if (cells[i, 0] == player && cells[i, 1] == player && cells[i, 2] == player) {
                     return true;
                 }
             }
 
-            for (int i = 0; i < 3; i++)
-            {
-                if (cells[0, i] == player && cells[1, i] == player && cells[2, i] == player)
-                {
+            for (int i = 0; i < 3; i++) {
+                if (cells[0, i] == player && cells[1, i] == player && cells[2, i] == player) {
                     return true;
                 }
             }
 
-            if (cells[0, 0] == player && cells[1, 1] == player && cells[2, 2] == player)
-            {
+            if (cells[0, 0] == player && cells[1, 1] == player && cells[2, 2] == player) {
                 return true;
             }
 
@@ -143,8 +137,7 @@ namespace TicTacToe {
             return false;
         }
 
-        public static bool CheckError(int turn) 
-        {
+        public static bool CheckError(int turn) {
             if (turn < 1 || turn > 9) {
                 Console.WriteLine("Invalid input!");
                 return true;
