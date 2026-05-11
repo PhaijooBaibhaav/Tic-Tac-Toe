@@ -1,4 +1,4 @@
-# TicTacToe 🎮
+# TicTacToe 
 
 ## Description
 A simple CLI-based Tic-Tac-Toe game written in **C#**.
