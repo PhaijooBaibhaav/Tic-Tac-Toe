@@ -71,12 +71,9 @@ namespace TicTacToe {
             {"7", "8", "9"},
         };
 
-        public static void ShowGrid()
-        {
-            for (int i = 0; i < cells.GetLength(0); i++)
-            {
-                for (int j = 0; j < cells.GetLength(1); j++)
-                {
+        public static void ShowGrid() {
+            for (int i = 0; i < cells.GetLength(0); i++) {
+                for (int j = 0; j < cells.GetLength(1); j++) {
                     Console.Write(' ' + cells[i, j]);
                     Console.Write("|");
                 }
@@ -85,22 +82,17 @@ namespace TicTacToe {
             }
         }
 
-        public static void GetInput(int turn, string player)
-        {
+        public static void GetInput(int turn, string player) {
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
 
 
 
-                    if (cells[i, j] == turn.ToString())
-                    {
+                    if (cells[i, j] == turn.ToString()) {
 
 
-                        if (cells[i, j] == "X" || cells[i, j] == "O")
-                        {
+                        if (cells[i, j] == "X" || cells[i, j] == "O") {
                             Console.WriteLine("This cell has already been taken!");
                             return ; /* exits the function here */
                         }
